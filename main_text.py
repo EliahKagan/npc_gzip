@@ -95,7 +95,7 @@ def non_neurl_knn_exp_given_dis(dis_matrix, k, test_label, train_label):
     return correct
 
 
-if __name__ == "__main__":
+def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--data_dir", default="data")
     parser.add_argument("--dataset", default="AG_NEWS")
@@ -288,3 +288,7 @@ if __name__ == "__main__":
             else:
                 dis_matrix = np.load(args.distance_fn)
                 non_neurl_knn_exp_given_dis(dis_matrix, 3, test_labels, train_labels)
+
+
+if __name__ == "__main__":
+    main()
