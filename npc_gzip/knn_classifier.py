@@ -43,7 +43,8 @@ class KnnClassifier:
         compressor: BaseCompressor,
         training_inputs: Sequence,
         training_labels: Optional[Sequence] = None,
-        distance_metric: str = "ncd") -> None:
+        distance_metric: str = "ncd",
+    ) -> None:
         self.compressor = compressor
 
         if isinstance(training_inputs, list) and isinstance(training_labels, list):
