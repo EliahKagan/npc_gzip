@@ -1,7 +1,7 @@
 from typing import Optional, Sequence, Union
 
-from tqdm import tqdm
 import numpy as np
+from tqdm import tqdm
 
 from npc_gzip.aggregations import concatenate_with_space
 from npc_gzip.compressors.base import BaseCompressor
