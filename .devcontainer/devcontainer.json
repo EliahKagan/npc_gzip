@@ -15,7 +15,7 @@
                 "gitlens.showWhatsNewAfterUpgrades": false,
                 "python.terminal.activateEnvInCurrentTerminal": true,
                 "python.terminal.activateEnvironment": true,
-                "python.defaultInterpreterPath": "~/.cache/pypoetry/virtualenvs/npc-gzip-YVLkJEFR-py3.11/bin/python"
+                "python.defaultInterpreterPath": "~/.cache/pypoetry/virtualenvs/npc-gzip/bin/python"
             }
         }
     },

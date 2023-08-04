@@ -9,6 +9,9 @@ pipx inject poetry poetry-plugin-sort poetry-plugin-up
 # Set up project environment for poetry.
 poetry install
 
+# Set up an invariant virtualenv symlink that matches defaultInterprerPath.
+ln -s -- "$(poetry env info --path)" ~/.cache/pypoetry/virtualenvs/npc-gzip
+
 # Modify the project environment so it can run all examples with no GPU.
 poetry run pip install -U pip setuptools wheel
 poetry run pip install torch --index-url https://download.pytorch.org/whl/cpu
