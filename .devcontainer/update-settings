@@ -1,0 +1,14 @@
+#!/bin/sh
+# Points VS Code defaultInterpreterPath into the poetry-managed virtualenv.
+
+set -eu
+
+settings_path="$HOME/.vscode-remote/data/Machine/settings.json"
+backup_path="$(dirname -- "$settings_path")/settings.json.bak"
+interpreter_path="$(poetry env info --executable)"
+
+cp -- "$settings_path" "$backup_path"
+
+jq --tab --arg interpreter_path "$interpreter_path" \
+    '.["python.defaultInterpreterPath"] = $interpreter_path' \
+    -- "$backup_path" >"$settings_path"
