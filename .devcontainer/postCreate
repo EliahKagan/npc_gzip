@@ -9,7 +9,6 @@ interpreter_path="$(poetry env info --executable)"
 
 cp -- "$settings_path" "$backup_path"
 
-# Point VS Code defaultInterpreterPath into the poetry-managed virtualenv.
 jq --tab --arg interpreter_path "$interpreter_path" \
     '.["python.defaultInterpreterPath"] = $interpreter_path' \
     -- "$backup_path" >"$settings_path"
