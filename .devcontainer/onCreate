@@ -12,6 +12,3 @@ poetry install
 # Modify the project environment so it can run all examples with no GPU.
 poetry run pip install -U pip setuptools wheel
 poetry run pip install torch --index-url https://download.pytorch.org/whl/cpu
-
-# Help VS Code know to automatically activate the project environment.
-"$(dirname -- "$0")"/update-settings

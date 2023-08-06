@@ -18,5 +18,6 @@
             }
         }
     },
-    "onCreateCommand": [".devcontainer/onCreate"]
+    "onCreateCommand": [".devcontainer/onCreate"],
+    "postCreateCommand": [".devcontainer/postCreate"]
 }
