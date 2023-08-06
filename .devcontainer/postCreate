@@ -7,9 +7,6 @@ settings_path="$HOME/.vscode-remote/data/Machine/settings.json"
 backup_path="$(dirname -- "$settings_path")/settings.json.bak"
 interpreter_path="$(poetry env info --executable)"
 
-# Create the settings file if it doesn't exist, while avoiding race conditions.
-(set -C; printf '{}\n' >"$settings_path") 2>/dev/null || true
-
 cp -- "$settings_path" "$backup_path"
 
 # Point VS Code defaultInterpreterPath into the poetry-managed virtualenv.
